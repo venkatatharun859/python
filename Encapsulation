@@ -1,0 +1,73 @@
+PROGRAM 1:
+class Car:
+    def __init__(self):
+        self.name="swift"
+        self.price=2346643
+        self.colour="blue"
+    def accelarate(self):
+        print("i am accelarating")
+    def braek_system(self):
+        print("car is stopping")
+    def start(self):
+        print("car is starting" )
+c1=Car()
+print(c1.name)
+print(c1.price)
+print(c1.colour)
+
+
+PROGRAM 2:
+class Car:
+    def __init__(self,name,price,colour):
+        self.name=name
+        self.price=price
+        self.colour=colour
+    def accelarate(self):
+        print("i am accelarating")
+    def braek_system(self):
+        print("car is stopping")
+    def start(self):
+        print("car is starting" )
+c1=Car("swift",65456564,"blue")
+print(c1.name)
+print(c1.price)
+print(c1.colour)
+c2=Car("toyota",6582564,"black")
+print(c2.name)
+print(c2.price)
+print(c2.colour)
+
+
+PROGRAM 3:
+class Student:
+    def __init__(self,name,id,yos):
+        self.name=name
+        self.id=id
+        self.yos=yos
+    def study(self):
+        print("i am studying")
+    def attend(self):
+        print(" attend the class")
+    def bunk(self):
+        print("bunk the class" )
+s1=Student("loki",64,2023)
+print(s1.name)
+print(s1.id)
+print(s1.yos)
+s2=Student("suman",54,2023)
+print(s2.name)
+print(s2.id)
+print(s2.yos)
+
+PROGRAM 4:
+class AccountHolder:
+    def __init__(self):
+        self.accountnumber=1234567
+        self.__balance=3456
+        self.__password=123
+    def setpassword(self,p):
+        self.__password=p
+    def getpassword(self):
+        return self.__password
+a=AccountHolder()
+print(a.accountnumber)
