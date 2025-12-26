@@ -1,0 +1,10 @@
+n=15
+m=20
+a=n
+b=m
+res=0
+if n!=0:
+    res=n  
+else:
+    res=m
+print((a*b)//(res))
