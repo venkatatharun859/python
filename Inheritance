@@ -1,4 +1,4 @@
-SINGLE INHERITANCE PROGRAM:
+SINGLE INHERITANCE PROGRAM 1:
 
 class Alpha:
     def fun1(self):
@@ -7,6 +7,36 @@ class Beta(Alpha):
     pass
 b=Beta()
 b.fun1()
+
+SINGLE INHERITANCE PROGRAM 2:
+
+class Customer:
+    def __init__(self,name,pnumber,addres):
+        self.name=name
+        self.pnumber=pnumber
+        self.addres=addres
+    def order(self):
+        print("iam ordering food")
+    def cancel_order(self):
+        print("i am cancelling oreder")
+    def payment(self):
+        print("i am paying amount")
+class GoldCustomer(Customer):
+    def __init__(self,name,pnumber,addres,Goldid):
+        super().__init__(name,pnumber,addres)
+        self.Goldid=Goldid
+    def free_delivery(self):
+        print("i am ordering with no delivery cost")
+c=Customer("dileep",34563,"kadapa")
+g=GoldCustomer("amul",8987,"rajampet",1)
+
+print(c.name)     
+print(c.pnumber)
+print(c.addres)
+print(g.name)     
+print(g.pnumber)
+print(g.addres)
+print(g.Goldid) 
 
 
 MULTILEVEL INHERITANCE PROGRAM:
