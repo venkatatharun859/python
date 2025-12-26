@@ -1,0 +1,36 @@
+class Messenger:
+    def send_message(self):
+        print("I am sending message")
+    def recieve_message(self):
+        print("I am receiving message")
+
+class Fmessanger(Messenger):
+    def send_message(self):
+        print("I am sending message using Facebook")
+    def recieve_message(self):
+        print("I am receiving message using Facebook")
+
+class Wmessanger(Messenger):
+    def send_message(self):
+        print("I am sending message using WhatsApp")
+    def recieve_message(self):
+        print("I am receiving message using WhatsApp")
+    def live_location(self):
+        print("I am sharing live location")
+
+class Imessanger(Messenger):
+    def display(self, ref):
+        ref.send_message()
+        ref.recieve_message()
+        if isinstance(ref, Wmessanger):
+            ref.live_location()
+
+f = Fmessanger()
+w = Wmessanger()
+i = Imessanger()
+
+i.display(f)
+print("-----")
+i.display(w)
+print("-----")
+i.display(i)
