@@ -1,0 +1,54 @@
+SINGLE INHERITANCE PROGRAM:
+
+class Alpha:
+    def fun1(self):
+        print("i am an alpha")
+class Beta(Alpha):
+    pass
+b=Beta()
+b.fun1()
+
+
+MULTILEVEL INHERITANCE PROGRAM:
+
+class Alpha:
+    def fun1(self):
+        print("i am an alpha")
+class Beta(Alpha):
+    def fun2(self):
+        print("i am beta")
+class Gamma(Beta):
+    pass
+g=Gamma()
+print(dir(Gamma))
+
+
+
+MULTIPLE INHERITANCE PROGRAM:
+
+class Alpha:
+    def fun1(self):
+        print("i am an alpha")
+class Beta:
+    def fun1(self):
+        print("i am beta")
+class Gamma(Alpha,Beta):
+    pass
+g=Gamma()
+g.fun1()
+
+
+HIERARCHICAL INHERITANCE PROGRAM:
+
+class Alpha:
+    def fun1(self):
+        print("i am an alpha")
+class Beta(Alpha):
+    def fun2(self):
+        print("i am beta")
+class Gamma(Alpha):
+    def fun3(self):
+        print("i am Gamma")
+b=Beta()
+b.fun1()
+b.fun2()
