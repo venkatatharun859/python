@@ -1,0 +1,109 @@
+PROGRAM 1:
+for i in range(5):
+    for j in range(5):
+        print("*",end="")
+    print()
+
+PROGRAM 2:
+
+for i in range(5):
+    for j in range(i+1):
+        print("*",end="")
+    print()
+
+PROGRAM 3:
+
+for i in range(5):
+    for j in range(5-i):
+        print("*",end="")
+    print()
+
+PROGRAM 4:
+for i in range(5):
+    for j in range(4-i):
+        print(" ",end="")
+    for j in range(i+1):    
+        print("*",end="")
+    print()
+
+
+PROGRAM 5:
+
+for i in range(5):
+    for j in range(4-i):
+        print(" ",end="")
+    for j in range(i+1):    
+        print("*",end=" ")
+    print()
+
+PROGRAM 6:
+
+for i in range(5):
+    for j in range(i):
+        print(" ",end="")
+    for j in range(5-i):
+        print("*",end="")
+    print()
+
+
+PROGRAM 7:
+
+for i in range(5):
+    for j in range(i):
+        print(" ",end="")
+    for j in range(5-i):
+        print("*",end=" ")
+    print()
+
+PROGRAM 8:
+
+for i in range(5):
+    for j in range(i+1):
+        print("*",end="")
+    print()
+
+
+PROGRAM 9:
+
+for i in range(4):
+    for j in range(4-i):
+        print("*",end="")
+    print() 
+
+PROGRAM 10:
+
+for i in range(5):
+    for j in range(4-i):
+        print(" ",end="")
+    for j in range(i+1):
+        print("*",end="")
+    print()
+for i in range(4):
+    for j in range(i+1):
+        print(" ",end="")
+    for j in range(4-i):
+        print("*",end="")
+    print()
+
+PROGRAM 11:
+
+for i in range(5):
+    for j in range(5):
+        if i==0 or i==4 or j==0 or j==4:
+            print("*",end=" ")
+        else:
+            
+            print(" ",end=" ")
+    print()
+
+
+PROGRAM 12:
+
+for i in range(5):
+    for j in range(5):
+        if i==j or i+j==4:
+            print("*",end=" ")
+        else:
+            
+            print(" ",end=" ")
+    print()
