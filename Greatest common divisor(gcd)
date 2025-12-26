@@ -1,0 +1,39 @@
+PROGRAM 1:
+
+n=15
+m=20
+if n>m:
+    x=m
+else:
+    x=n
+def gcd(n,m,x):
+    for i in range(x,0,-1):
+        if n%i==0 and m%i==0:
+            return i
+print(gcd(n,m,x)) 
+
+PROGRAM 2:
+
+n=15
+m=20
+while n!=m:
+    if n>m:
+        n=n-m
+    else:
+        m=m-n
+print(m)  
+
+PROGRAM 3:
+
+n=15
+m=20
+
+while n!=0 and m!=0:
+    if n>m:
+        n=n%m
+    else:
+        m=m%n
+if n!=0:
+    print(n)
+else:
+    print(m)
