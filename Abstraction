@@ -1,0 +1,17 @@
+from abc import ABC, abstractmethod
+class Messenger(ABC):
+    @abstractmethod
+    def send_message(self):
+        pass
+    @abstractmethod
+    def recieve_message(self):
+        pass
+class Fmessenger(Messenger):
+    def send_message(self):
+        print("Sending message using Facebook")
+    def recieve_message(self):
+        print("Receiving message using Facebook")
+
+f = Fmessenger()
+f.send_message()
+f.recieve_message()
