@@ -1,0 +1,30 @@
+# reverse the string
+
+PROGRAM 1:
+s="hello"
+res=""
+for i in range(len(s)):
+    res=s[i]+res
+print(res)
+
+PROGRAM 2:
+
+s="tharun"
+res=""
+for  i in range(-1,-7,-1):
+    res=res+s[i]
+print(res)
+
+#string is palindrome
+
+s="madam"
+def palindrome(s):
+    i=0
+    j=len(s)-1
+    while i<j:
+        if s[i]!=s[j]:
+            return "not a palindrome"
+        i+=1
+        j-=1
+    return "palindrome"
+print(palindrome(s))
