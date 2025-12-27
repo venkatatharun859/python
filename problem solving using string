@@ -28,3 +28,82 @@ def palindrome(s):
         j-=1
     return "palindrome"
 print(palindrome(s))
+
+
+
+
+
+
+
+
+
+'''s="hello"
+res=""
+for  i in range(len(s)):
+    res=s[i]+res
+print(res)'''
+
+'''s="tharun"
+res=""
+for  i in range(-1,-7,-1):
+    res=res+s[i]
+print(res)
+
+
+
+def fibanocci(n):
+    if n<=1:
+        return n
+    return fibanocci(n-1)+ fibanocci(n-2)
+print(fibanocci(7))'''
+
+# def add(n):
+#     if n==1:
+#         return 1
+#     return n+add(n-1)
+
+# print(add(5))
+
+
+
+
+# def fact(n):
+#     if n==1:
+#         return 1
+#     return n*fact(n-1)
+# print(fact(5))
+
+
+# def josephos(n,k):
+#     if n==1:
+#         return 0
+#     return (josephos(n-1,k)+k)%n
+# print(josephos(100,2))
+
+
+def substring(s,ans):
+    if len(s)==0:
+        print((ans))
+        return
+    substring(s[1:],ans+s[0])
+    substring(s[1:],ans)
+
+substring("abc","")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
