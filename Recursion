@@ -1,0 +1,49 @@
+PROGRAM1:
+
+def fibanocci(n):
+    if n<=1:
+        return n
+    return fibanocci(n-1)+ fibanocci(n-2)
+print(fibanocci(7))
+
+
+PROGRAM2:
+
+def add(n):
+    if n==1:
+        return 1
+    return n+add(n-1)
+
+print(add(5))
+
+
+PROGRAM3:
+
+def fact(n):
+    if n==1:
+        return 1
+    return n*fact(n-1)
+print(fact(5))
+
+
+PROGRAM4:
+
+def josephos(n,k):
+    if n==1:
+        return 0
+    return (josephos(n-1,k)+k)%n
+print(josephos(100,2))
+
+
+PROGRAM5:
+
+def substring(s,ans):
+    if len(s)==0:
+        print((ans))
+        return
+    substring(s[1:],ans+s[0])
+    substring(s[1:],ans)
+
+substring("abc","") 
+
+
