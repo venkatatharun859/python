@@ -31,71 +31,118 @@ print(palindrome(s))
 
 
 
+# count vowels and consonants
+
+s="studying"
+vowel_count=0
+consonant_count=0
+for char in s:
+    if char in "aeiou":
+        vowel_count+=1
+    else:
+        consonant_count+=1
+print("vowels:",vowel_count)
+print("consonants:", consonant_count)
 
 
+#check if two strings are anagrams
+
+PROGRAM1:
+
+s="eat"
+r="ate"
+def anagram(s,r):
+    if len(s)!=len(r):
+        return "not angram"
+    for char in s:
+        if char not in r:
+            return "not anagram"
+    return "anagram"
+print(anagram(s,r))
 
 
+PROGRAM2:
+
+s="aab"
+r="abb"
+if sorted(s)==sorted(r):
+    print("anagram")
+else:    
+    print("not anagram")
 
 
-'''s="hello"
+PROGRAM3:
+
+s="baaaaaa"
+r="aaaaaab"
+res={}
+res1={}
+for char in s:
+    res[char]=res.get(char,0)+1
+for c in r:
+    res1[c]=res1.get(c,0)+1
+def check_anagram(res,res1):
+    if len(res)!=len(res1):
+        
+        return False
+    for char in res:
+        if char not in s:
+            if res[char]!=res1.get(char,0):
+                return False
+    return True
+print(check_anagram(res,res1))  
+
+
+ #remove duplicate characters
+ 
+s="dileep"
 res=""
-for  i in range(len(s)):
-    res=s[i]+res
-print(res)'''
+for char in s:
+    if char not in res:
+        res=res+char
+print(res) 
 
-'''s="tharun"
+
+#find the first non-repeating character
+  
+PROGRAM1:
+  
+s="swiss"
+for char in s:
+    if s.count(char)==1:
+        print(char)
+        break
+
+
+PROGRAM2:
+
+s="aaaab"
+def helper(s):
+    for char in s: 
+        if s.count(char)==1: 
+            return "character"
+        return "no character" 
+print(helper(s))
+
+
+#convert string to uppercase/lowercase
+    
+ PROGRAM1:
+    
+s="tharun"
 res=""
-for  i in range(-1,-7,-1):
-    res=res+s[i]
+for char in s:
+    res+=chr(ord(char)-32)
 print(res)
 
 
+ PROGRAM2:
 
-def fibanocci(n):
-    if n<=1:
-        return n
-    return fibanocci(n-1)+ fibanocci(n-2)
-print(fibanocci(7))'''
-
-# def add(n):
-#     if n==1:
-#         return 1
-#     return n+add(n-1)
-
-# print(add(5))
-
-
-
-
-# def fact(n):
-#     if n==1:
-#         return 1
-#     return n*fact(n-1)
-# print(fact(5))
-
-
-# def josephos(n,k):
-#     if n==1:
-#         return 0
-#     return (josephos(n-1,k)+k)%n
-# print(josephos(100,2))
-
-
-def substring(s,ans):
-    if len(s)==0:
-        print((ans))
-        return
-    substring(s[1:],ans+s[0])
-    substring(s[1:],ans)
-
-substring("abc","")
-
-
-
-
-
-
-
+s="THARUN"
+res=""
+for char in s:
+    res+=chr(ord(char)+32)
+print(res)
 
 
 
