@@ -1,0 +1,54 @@
+PROGRAM1:
+
+def perm(nums,i):
+    if i==len(nums)-1:
+        print((nums))
+        return
+    for j in range(i,len(nums)):
+        nums[i],nums[j]=nums[j],nums[i]
+        perm(nums,i+1)
+        nums[i],nums[j]=nums[j],nums[i]
+print(perm([1,2,3],0))
+
+
+PROGRAM2:
+
+def perm(nums,i):
+    if i==len(nums)-1:
+        print((nums))
+        return
+    hash={}
+    for j in range(i,len(nums)):
+        if nums[j] not in hash:
+            hash[nums[j]]=True
+            nums[j],nums[j]=nums[j],nums[j]
+            perm(nums,i+1)
+            nums[j],nums[j]=nums[j],nums[j]
+perm([1,2,3],0)
+
+
+PROGRAM3:
+
+def subset(nums,current,i):
+    if i==len(nums):
+        print(current)
+        return
+    subset(nums,current,i+1)
+    current.append(nums[i])
+    subset(nums,current,i+1)
+    current.pop()
+subset([1,2,3],[],0)
+
+
+PROGRAM4:
+
+def combinations(n,k,curr,start):
+    
+    if len(curr)==k:
+        print(curr)
+        return
+    for j in range(start,n+1):
+        curr.append(j)
+        combinations(n,k,curr,j)
+        curr.pop()
+combinations(4,2,[],1)
