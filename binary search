@@ -1,0 +1,27 @@
+class Node:
+    def __init__(self,data):
+        self.left=None
+        self.data=data
+        self.right=None
+
+class Tree:
+    def search_element(root,element):
+        if root==None:
+            return False
+        if root.data==element:
+            return True
+        elif element>root.data:
+            return Tree.search_element(root.right,element)
+        else:
+            return Tree.search_element(root.left,element)
+        return False
+
+root=Node(100)
+root.left=Node(20)
+root.right=Node(110)
+root.left.left=Node(5)
+root.left.right=Node(22)
+root.right.left=Node(105)
+root.right.right=Node(120)
+
+print(Tree.search_element(root,element=5))
