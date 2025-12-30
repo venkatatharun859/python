@@ -1,0 +1,8 @@
+s=[5,4,3,2,1]
+for i in range(len(s)):
+    smallest=i
+    for j in range(i+1,len(s)):
+        if s[j]<s[smallest]:
+            smallest=j
+        s[i],s[smallest]=s[smallest],s[i]
+print(s)
