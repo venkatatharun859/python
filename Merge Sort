@@ -1,0 +1,26 @@
+def helper(l,r):
+    i=0
+    j=0
+    res=[]
+    while i<len(l) and j<len(r):
+        if l[i]<r[j]:
+            res.append(l[i])
+            i+=1
+        else:
+            res.append(r[j])
+            j+=1
+    while i<len(l):
+        res.append(l[i])
+        i+=1
+    while j<len(r):
+        res.append(r[j])
+        j+=1
+    return res
+def merge_sort(s):
+    if len(s)<=1:
+        return s
+    mid=len(s)//2
+    left_side=merge_sort(s[:mid])
+    right_side=merge_sort(s[mid:])
+    return helper(left_side,right_side)
+print(merge_sort([5,4,3,2,1]))
